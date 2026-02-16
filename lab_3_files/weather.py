@@ -36,7 +36,6 @@ def min_min_temp(file_list):
 def F_to_C(f_temp):
     return 5*(float(f_temp)-32)/9
 
-
 #This function uses F_to_C to change an entire files temps from F to C
 def F_to_C_file(file_list):
     for lists in file_list:

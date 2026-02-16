@@ -66,6 +66,8 @@ def average(file_list, column):
         #print(type(list[column]), list[column])
         count += 1
         average += float(list[column])
+    if count == 0:
+        return 0.0
     return average/count
 #Find the total rain per year by usiung the above functions
 def total_rain_by_year(file_list):
