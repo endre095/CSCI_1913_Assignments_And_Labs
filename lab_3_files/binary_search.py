@@ -3,10 +3,10 @@ import random
 def create_list(size):
     return_list = []
     for i in range(size):
-        random_int = random.randint(0,1000)
+        random_int = random.randint(0,50)
         return_list.append(random_int)
     return return_list
-test = [0,2,7,12,17,25,40]
+
 
 def binary_search(list, value):
     high = len(list)-1
@@ -21,5 +21,15 @@ def binary_search(list, value):
             high = middle+1
     return -1
 
-print(binary_search(test, 7))
-print(create_list(10))
+def bubble_sort(list):
+    for i in range(len(list)-1):
+        for j in range(len(list)-1 - i):
+            if (list[j] > list[j+1]):
+                temp = list[j]
+                list[j] = list[j] + 1
+                list[j+1] = temp
+    return list
+
+test = create_list(100)
+print(test)
+print(bubble_sort(test))
