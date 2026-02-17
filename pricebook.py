@@ -13,6 +13,8 @@ prices_sorted = [(300.0, 'Camera'),
                  (690.0, 'Laptop'), 
                  (80.0, 'Lego')]
 
+""" This function takes in a list and compares its name values 
+alphabetically to see if it is in order"""
 def is_sorted(pricebook):
     if len(pricebook) == 0:
         return True
@@ -82,6 +84,7 @@ def sorted_put(pricebook, name, price):
     temp_tuple = (price, name)
     if len(pricebook) == 0:
         pricebook.append(temp_tuple)
+        return
     for i in range(len(pricebook)):
         if pricebook[i][1] == name:
             pricebook[i] = list(pricebook[i])
@@ -94,12 +97,14 @@ def sorted_put(pricebook, name, price):
         temp_tuple = (price, name)
         pricebook.insert(0, temp_tuple)
         return
-    if name > pricebook[len(pricebook)-1][1]:
+    elif name > pricebook[len(pricebook)-1][1]:
         temp_tuple = (price, name)
         pricebook.append(temp_tuple)
         return
     else:
-        for i in range(1, len(pricebook)-2):
-            if pricebook[i][1] > name:
+        for i in range(len(pricebook)):
+            if name < pricebook[i][1]:
                 pricebook.insert(i,temp_tuple)
+                return
     return
+
