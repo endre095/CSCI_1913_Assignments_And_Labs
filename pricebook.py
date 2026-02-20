@@ -1,7 +1,7 @@
-'''
-sorted_put(pricebook, name, price)
-'''
-
+"""
+Author: Andrew Endres
+Worked independently.
+"""
 prices = [(80.0, 'Lego'),
           (690.0, 'Laptop'),
           (300.0, 'Camera'),
