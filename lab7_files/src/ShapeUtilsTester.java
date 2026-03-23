@@ -31,7 +31,7 @@ public class ShapeUtilsTester {
          Tester.doTest(42.083369636948035, d2, ".distance(p1, p3)");
      }
 
-     public static void testGetCenter() {
+      public static void testGetCenter() {
          System.out.println("******************* Center point tests *******************");
 
          Point[] points;
@@ -93,7 +93,7 @@ public class ShapeUtilsTester {
 
      }
 
-     public static void testCircleArea() {
+      public static void testCircleArea() {
          System.out.println("******************* Get Circle area tests *******************");
 
          System.out.println("Test 1");
@@ -162,7 +162,7 @@ public class ShapeUtilsTester {
          Tester.doTest(1.2880529879718157, ring_area_test_4, "ShapeUtils.getArea(Ring)");
      }
 
-     public static void testIsInCircle() {
+      public static void testIsInCircle() {
          System.out.println("******************* Is in circle tests *******************");
 
          System.out.println("Test 1");
@@ -180,6 +180,6 @@ public class ShapeUtilsTester {
          p = new Point(0, 0);
          Tester.doTest(true, ShapeUtils.isIn(c1, p), "ShapeUtils.isIn(Circle, Point)");
      }
-
+ 
 
  }

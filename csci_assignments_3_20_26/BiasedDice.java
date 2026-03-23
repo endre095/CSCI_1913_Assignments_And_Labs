@@ -37,7 +37,7 @@ public class BiasedDice extends Dice{
             return this.sideFavored;
         }
         int currentDie = random.nextInt(getSides()) + 1;
-        while (currentDie == this.sideFavored) {
+        while (currentDie == sideFavored) {
             currentDie = random.nextInt(getSides()) + 1;
         }
         return currentDie;
