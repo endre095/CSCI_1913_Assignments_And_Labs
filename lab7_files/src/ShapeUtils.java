@@ -35,15 +35,14 @@ public class ShapeUtils {
     public static double getArea(Circle circ) {
         return Circle.getArea(circ);
     }
-    /*
-    returns circle area of a non-instance 
-     */
+
 
     public static double getArea(Ring ring) {
-        return ring.getArea();
+        return Math.PI * (Math.pow(ring.getInnerCircle().getRadius() + ring.getThickness(), 2.0)
+                - Math.pow(ring.getInnerCircle().getRadius(), 2.0));
     }
     /*
-    returns area of a ring object
+    returns area of a ring object BY PASSING A RING INTO FUNCTION then completing the calculation.
      */
 
     public static boolean isIn(Circle circle, Point point) {

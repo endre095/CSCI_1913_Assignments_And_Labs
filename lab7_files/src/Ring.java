@@ -23,13 +23,7 @@ public class Ring {
         }
         this.innerCircle = innerCircle;
         this.thickness = thickness;
-
     }
-
-    public double getArea() {
-        return Math.PI*(Math.pow(this.innerCircle.getRadius() + this.thickness, 2.0) - Math.pow(this.innerCircle.getRadius(), 2.0));
-    }
-
 
     public double getThickness() {
         return thickness;
