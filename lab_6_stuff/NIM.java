@@ -1,7 +1,7 @@
 /*
  * CSCI 1913
  * Lab 06
- * Author: TODO: FILL ME IN
+ * Author: Andrew Endres (Worked independently).
  * */
 
 
