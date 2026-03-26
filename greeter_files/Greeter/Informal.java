@@ -5,7 +5,7 @@ public class Informal extends Greeter{
     }
 
     public String toString() {
-        return "What's up, " + this.name + "?";
+        return "What's up, " + getName() + "?";
     }
 
     public void greet() {

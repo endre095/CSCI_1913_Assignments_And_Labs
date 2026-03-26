@@ -1,4 +1,4 @@
-public class Formal {
+public class Formal extends Greeter{
     private String title;
 
     public Formal(String title, String name) {

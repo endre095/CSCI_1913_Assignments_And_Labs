@@ -1,12 +1,12 @@
 public abstract class Greeter {
-    private string name;
+    private String name;
 
     public Greeter(String name) {
         this.name = name;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public abstract void greet();
