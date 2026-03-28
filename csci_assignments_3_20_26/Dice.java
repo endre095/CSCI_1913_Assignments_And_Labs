@@ -4,11 +4,10 @@ import java.util.Random;
 
 public class Dice {
     private int sidesNum = 6;
-    private Random random; 
+    private Random random = new Random();
 
     public Dice(int sidesNum) {
         this.sidesNum = sidesNum;
-        random = new Random();
     }
     public int getSides() {
         return sidesNum;

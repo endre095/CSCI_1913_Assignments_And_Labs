@@ -23,9 +23,7 @@ public class Ring {
         }
         this.innerCircle = innerCircle;
         this.thickness = thickness;
-
     }
-
 
     public double getThickness() {
         return thickness;

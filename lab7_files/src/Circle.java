@@ -25,12 +25,12 @@ public class Circle {
     }
 
     public double getArea() {
-        // TODO
-        return 0;
+        return Math.PI * radius * radius;
     }
 
-    public static double getArea(Circle c) {
-        return 0;
+
+    public static double getArea(Circle circ) {
+        return Math.PI* circ.getRadius()* circ.getRadius();
     }
 
     /**
