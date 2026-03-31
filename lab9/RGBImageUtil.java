@@ -52,7 +52,6 @@ public class RGBImageUtil {
     public static void showImage(RGBImage img) {
         showImage(getBI(img));
     }
-
     /**
      * Save an image
      * @param img the image to save
