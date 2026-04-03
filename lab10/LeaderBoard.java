@@ -1,4 +1,5 @@
 /**
+ * NAME: ANDREW ENDRES
  * An object that tracks the top-N values of a larger collection.
  * This data structure stores N elements of any sortable type.
  * (NOTE -- while we initially envisioned this in relation to GameScores -- we're building this with generics
@@ -35,23 +36,35 @@ public class LeaderBoard<T extends Comparable<T>> {
     }
 
     public int getSize(){
-        // todo fill in this function
-        return 0; // replace me.
+        return this.scores.length;
     }
 
     public T highScore() {
-        // todo fill in this function
-        return null; // replace me.
+        return this.scores[0];
     }
 
     public T lowScore() {
-
-        // todo fill in this function
-        return null; // replace me.
+        return this.scores[getSize()-1];
     }
 
     public void add(T newScore) {
-        // TODO: fill in this function.
+        int size = getSize();
+
+        if (scores[size - 1].compareTo(newScore) >= 0) { //checks if the new score should even be considered
+            return;
+        }
+
+        scores[size - 1] = newScore;
+        int i = size - 1;
+
+        while (i > 0 && scores[i].compareTo(scores[i - 1]) > 0) { //while the loop runs, it swaps the current indeex, with the previous until the list is sorted
+            // swap
+            T temp = scores[i];
+            scores[i] = scores[i - 1];
+            scores[i - 1] = temp;
+
+            i--; //goes up the list
+        }
     }
 
     @Override
