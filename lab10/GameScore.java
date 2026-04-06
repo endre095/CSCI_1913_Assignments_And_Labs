@@ -37,7 +37,7 @@ public class GameScore implements Comparable<GameScore>{
         if (!(o instanceof GameScore)) return false;
 
         GameScore temp = (GameScore) o;
-        if (this.recordName.equals(this.recordName) && // tricky, i forgot you had to use this version for strings because they are also objects 
+        if (this.recordName.equals(temp.recordName) && // tricky, i forgot you had to use this version for strings because they are also objects 
             this.score == temp.score && 
             this.hardMode == temp.hardMode) {
                 return true;
@@ -51,11 +51,11 @@ public class GameScore implements Comparable<GameScore>{
      */
 
     public int compareTo(GameScore other) {
-        if (this.isHardMode() == true && other.isHardMode() == false) { // determins if one game is on hard mode and the other isnt, if
+        if (this.isHardMode() && !other.isHardMode()) { // determins if one game is on hard mode and the other isnt, if
                                                         // so, returns the winner
             return 1;
         }
-        else if (this.isHardMode() == false && other.isHardMode() == true) {
+        else if (!this.isHardMode()  && other.isHardMode()) {
             return -1;
         }
 
