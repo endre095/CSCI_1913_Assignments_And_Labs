@@ -1,4 +1,4 @@
-public class Generic<Type> {
+/*public class Generic<Type> {
 
     private Type data;
 
@@ -16,4 +16,4 @@ public class Generic<Type> {
         System.out.println(this.toString());
     }
 
-}
+}*/
